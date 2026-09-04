@@ -1,25 +1,65 @@
-# DevCollab - Cognifyz Internship
+# DevCollab
 
-DevCollab is a production-oriented full-stack developer collaboration platform being developed as part of the **Cognifyz Full Stack Development Internship**.
+DevCollab is a production-oriented full-stack developer collaboration platform designed to provide a structured environment for teams to manage workspaces, projects, tasks, members, roles, permissions, and collaboration workflows.
 
-The platform is designed to simulate a real-world developer collaboration environment where users and teams can manage **workspaces, projects, tasks, team members, and collaboration workflows** while following modern software engineering and production-ready development practices.
+The platform is being built as a single cohesive application with a focus on real-world software engineering practices rather than isolated feature demonstrations.
 
-Throughout the internship, DevCollab will progressively implement all **8 Full Stack Development tasks** provided by Cognifyz. The required concepts will be integrated into a single cohesive application rather than being treated as isolated demo projects.
+## Core Capabilities
 
-### Key Engineering Areas
-
-- Frontend development
+- Organization management
+- Workspace management
+- Workspace member management
+- Role-based access control (RBAC)
+- Fine-grained permissions
+- Authentication and authorization
+- Project and task management
+- Team collaboration workflows
 - RESTful backend APIs
-- Authentication & authorization
-- Database integration
-- Middleware architecture
-- External API integration
-- Caching
-- Background processing
-- Scalable and modular application architecture
+- Database-driven application architecture
 
-The project follows a **module-based backend architecture** with a clear separation between routes, controllers, services, validation, middleware, configuration, and database concerns.
+## Engineering Focus
 
-The primary goal is not only to complete the internship requirements but also to build a **portfolio-quality, production-oriented application** that demonstrates practical full-stack engineering, clean architecture, maintainability, and real-world problem-solving.
+DevCollab follows a modular backend architecture with clear separation of responsibilities across:
 
-> 🚧 **Project Status:** Active Development — Backend foundation and authentication module setup in progress.
+- Routes
+- Controllers
+- Services
+- Repositories
+- Validation
+- Middleware
+- Authentication
+- Authorization
+- Database configuration
+- Migrations and seed data
+
+The authorization model is designed around organizations, workspaces, roles, and permissions, allowing different users to have controlled access to specific resources and operations.
+
+The project is being developed with production-oriented principles such as:
+
+- Transactional database operations
+- Input validation
+- Centralized authentication and authorization
+- Role and permission based access control
+- Soft deletion and restoration
+- Modular and maintainable code structure
+- Secure password handling
+- Clear separation of business and data-access logic
+
+## Architecture
+
+The application follows a layered backend architecture:
+
+```text
+Client
+  ↓
+Routes
+  ↓
+Middleware
+  ↓
+Controllers
+  ↓
+Services
+  ↓
+Repositories
+  ↓
+PostgreSQL
